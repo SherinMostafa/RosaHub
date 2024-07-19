@@ -1,6 +1,8 @@
 import NotFound from "../Components/NotFound";
-import About from "../Pages/About";
 import Home from "../Pages/Home";
+import About from "../Pages/About";
+import Contact from "../Pages/Contact";
+import Plants from "../Pages/Plants";
 
 export const Pages = [
     {
@@ -9,15 +11,20 @@ export const Pages = [
         name: 'Home'
     },
     {
+        path: '/Plants',
+        element: <Plants />,
+        name: 'Plants'
+    },
+    {
         path: '/About',
         element: <About />,
-        name: 'About'
+        name: 'About Us'
     },
-    // {
-    //     path: '/contact',
-    //     element: <Contact />,
-    //     name: 'Contact'
-    // },
+    {
+        path: '/Contact',
+        element: <Contact />,
+        name: 'Contact Us'
+    },
     {
         path: '*',
         element: <NotFound />,

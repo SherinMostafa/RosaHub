@@ -6,7 +6,9 @@ import Navbar from '../Layout/Navbar';
 const AppRouter = () => {
   return (
     <Router>
-      <Navbar />
+      <div className='pb-16'>
+        <Navbar />
+      </div>
       <Routes>
         {Pages.map((page) => (
           <Route
