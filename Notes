@@ -1,0 +1,17 @@
+Color Palette
+1- #010101 > Black
+2- #faf6ed > Quarter Spanish White
+3- #5cb25d > Fern
+4- #bebab3 > Cotton Seed
+5- #e6ca51 > Confetti
+6- #484847 > Fuscous Grey
+7- #02ec88 > Spring Green
+8- #e53529 > Cinnabar
+9- #0f9015 > La Palma
+10-#b25e7e > Tapestry
+
+Libraries:
+1- npm install -D tailwindcss > npx tailwindcss init
+2- npm install --save react-spinners
+3- npm install --save react-icons
+4- npm install react-router-dom@6
