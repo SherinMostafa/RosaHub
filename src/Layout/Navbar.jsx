@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Pages } from '../Constants/index';
 import Button from '../Components/Button'; // Import the reusable Button component
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <>
@@ -25,9 +26,14 @@ const Navbar = () => {
                   <Link
                     key={page.name}
                     to={page.path}
-                    className="text-[#010101] hover:text-[#0f9015] px-3 py-2 rounded-md text-sm font-medium flex items-center transition-all duration-300"
+                    className={`relative px-3 py-2 rounded-md text-sm font-medium flex items-center transition-all duration-300 ${
+                      location.pathname === page.path
+                        ? 'text-[#0f9015]'
+                        : 'text-[#010101] hover:text-[#0f9015]'
+                    } group`}
                   >
                     {page.icon && <page.icon className="mr-1" />} {page.name}
+                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-[#0f9015] transition-all duration-300 ${location.pathname === page.path ? 'w-full' : 'group-hover:w-full'}`}></span>
                   </Link>
                 ))}
               </div>

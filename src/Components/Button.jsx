@@ -8,18 +8,24 @@ const Button = ({ label, onClick, className = '', link = false, to = '' }) => {
         to={to}
         className={`text-sm font-semibold text-white px-4 py-2 rounded-sm bg-[#5cb25d] hover:bg-[#0f9015] focus:outline-none transition-all duration-300 ${className}`}
       >
-        {label}
+        <button>
+          {label}
+        </button>
       </Link>
     );
   }
 
   return (
-    <button
-      onClick={onClick}
+    <Link
+      to={to}
       className={`text-sm font-semibold text-[#010101] px-4 py-2 rounded-sm hover:text-[#0f9015] focus:outline-none transition-all duration-300 ${className}`}
     >
-      {label}
-    </button>
+      <button
+        onClick={onClick}
+      >
+        {label}
+      </button>
+    </Link>
   );
 };
 
