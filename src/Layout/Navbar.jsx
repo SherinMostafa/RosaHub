@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Pages } from '../Constants/index';
-import Button from '../Components/Button'; // Import the reusable Button component
+import Button from '../Components/Button';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const menu = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menu.current && !menu.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
@@ -70,7 +84,16 @@ const Navbar = () => {
         </div>
       </nav>
 
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black opacity-50 z-30"
+        ></div>
+      )}
+
+      {/* Mobile Menu */}
       <div
+        ref={menu}
         className={`fixed inset-x-0 top-16 bg-[#faf6ed] transition-transform transform ${
           isOpen ? 'translate-y-0' : '-translate-y-full'
         } sm:hidden z-40`}
@@ -82,7 +105,7 @@ const Navbar = () => {
               key={page.name}
               to={page.path}
               className="text-[#010101] hover:text-[#0f9015] px-3 py-2 rounded-md text-base font-medium flex items-center transition-all duration-300"
-              onClick={() => setIsOpen(false)} // Close menu on link click
+              onClick={() => setIsOpen(false)}
             >
               {page.icon && <page.icon className="mr-1" />} {page.name}
             </Link>
