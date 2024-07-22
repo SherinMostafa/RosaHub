@@ -55,8 +55,8 @@ const Navbar = () => {
 
             {/* Buttons Container on Large Screens */}
             <div className="hidden md:flex md:items-center md:space-x-4">
-              <Button label="Login" link={false} to="/Login" />
-              <Button label="Register" link={true} to="/Register" />
+              <Button label="Login" link={true} to="/Login" className='hover:text-[#0f9015]' />
+              <Button label="Register" link={true} to="/Register" className='text-white bg-[#5cb25d] hover:bg-[#0f9015]' />
             </div>
 
             {/* Mobile Menu Button and Buttons Container */}
