@@ -18,4 +18,4 @@ Libraries:
 5- npm i swiper
 6- npm install react-hook-form
 7- npm install @hookform/error-message
-8- npm install --save react-toastify
+8- npm install react-hot-toast

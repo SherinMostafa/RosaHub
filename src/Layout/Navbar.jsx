@@ -62,8 +62,8 @@ const Navbar = () => {
             {/* Mobile Menu Button and Buttons Container */}
             <div className="flex items-center md:hidden">
               <div className="ml-4 flex space-x-2">
-                <Button label="Login" link={false} to="/Login" />
-                <Button label="Register" link={true} to="/Register" />
+                <Button label="Login" link={true} to="/Login" className='hover:text-[#0f9015]' />
+                <Button label="Register" link={true} to="/Register" className='text-white bg-[#5cb25d] hover:bg-[#0f9015]' />
               </div>
               <button
                 onClick={() => setIsOpen(!isOpen)}

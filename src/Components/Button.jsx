@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Button = ({ label, className = '', link = false, to = '', type }) => {
+const Button = ({ label, className = '', link = false, to = '', type, ...props }) => {
   if (link) {
     return (
       <Link
@@ -19,6 +19,7 @@ const Button = ({ label, className = '', link = false, to = '', type }) => {
     <button
       type={type}
       className={`text-sm font-semibold px-4 py-2 rounded-sm focus:outline-none transition-all duration-300 ${className}`}
+      {...props}
     >
       {label}
     </button>
