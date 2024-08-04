@@ -31,3 +31,16 @@ export const Pages = [
         name: 'NotFound'
     }
 ];
+
+export const Plant = [
+    {
+        name: 'Jasmine',
+        image: '/Assets/Images/jasmine.jpg',
+        description: 'Jasmine is an aromatic plant that thrives in warm climates. It has a beautiful fragrance and is used in perfumes. It also has remarkable properties such as jasmine tea.',
+    },
+    {
+        name: 'Jasmine',
+        image: '/Assets/Images/jasmine.jpg',
+        description: 'Jasmine is an aromatic plant that thrives in warm climates. It has a beautiful fragrance and is used in perfumes. It also has remarkable properties such as jasmine tea.',
+    }
+];

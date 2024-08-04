@@ -8,6 +8,8 @@ import 'swiper/css/effect-fade';
 
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import Button from '../Components/Button';
+import { Plant } from '../Constants/index'
+import PlantCard from '../Components/PlantCard';
 
 const Home = () => {
   return (
@@ -69,8 +71,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section id=''>
-        
+      <section id='plant-section' className=''>
+        <div className='flex flex-wrap justify-center'>
+          {Plant.map((plant, index) => (
+            <PlantCard key={index} plant={plant} />
+          ))}
+        </div>
       </section>
     </>
   );

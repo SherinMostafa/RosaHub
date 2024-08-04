@@ -87,7 +87,7 @@ const Navbar = () => {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black opacity-50 z-30"
+          className="fixed inset-0 bg-black opacity-50 z-30 md:hidden"
         ></div>
       )}
 
@@ -96,7 +96,7 @@ const Navbar = () => {
         ref={menu}
         className={`fixed inset-x-0 top-16 bg-[#faf6ed] transition-transform transform ${
           isOpen ? 'translate-y-0' : '-translate-y-full'
-        } sm:hidden z-40`}
+        } md:hidden z-40`}
         id="mobile-menu"
       >
         <div className="px-2 pt-2 pb-3 space-y-1">

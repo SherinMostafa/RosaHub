@@ -12,7 +12,7 @@ const Contact = () => {
     toast.custom((t) => (
       <div
         className={`${
-          t.visible ? 'animate-enter' : 'animate-leave'
+          t.visible ? 'animate-enter mt-14' : 'animate-leave mt-14'
         } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex`}
       >
         <div className="flex-1 w-0 p-4">
