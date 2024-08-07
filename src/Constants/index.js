@@ -37,10 +37,20 @@ export const Plant = [
         name: 'Jasmine',
         image: '/Assets/Images/jasmine.jpg',
         description: 'Jasmine is an aromatic plant that thrives in warm climates. It has a beautiful fragrance and is used in perfumes. It also has remarkable properties such as jasmine tea.',
+        category: 'Aromatic Plants'
     },
     {
         name: 'Jasmine',
         image: '/Assets/Images/jasmine.jpg',
         description: 'Jasmine is an aromatic plant that thrives in warm climates. It has a beautiful fragrance and is used in perfumes. It also has remarkable properties such as jasmine tea.',
+        category: 'Aromatic Plants'
+    },
+    {
+        name: 'Jasmine',
+        image: '/Assets/Images/jasmine.jpg',
+        description: 'Jasmine is an aromatic plant that thrives in warm climates. It has a beautiful fragrance and is used in perfumes. It also has remarkable properties such as jasmine tea.',
+        category: 'Ornamental Plants'
     }
 ];
+
+export const Category = ['Aromatic Plants', 'Herbaceous Plants', 'Ornamental Plants'];

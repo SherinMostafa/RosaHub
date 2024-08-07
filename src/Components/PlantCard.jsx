@@ -7,7 +7,7 @@ const PlantCard = ({ plant }) => {
       <img className="w-full h-72 object-cover" src={plant.image} alt={plant.name} />
       
       {/* Plant Name */}
-      <div className="absolute top-4 left-4 text-white font-bold text-2xl z-10">
+      <div className="absolute top-4 left-4 text-[#b25e7e] font-bold text-2xl z-10">
         {plant.name}
       </div>
       
@@ -34,9 +34,6 @@ const PlantCard = ({ plant }) => {
           />
         </div>
       </div>
-      
-      {/* Overlay Effect */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50 -z-0"></div>
     </div>
   );
 };
