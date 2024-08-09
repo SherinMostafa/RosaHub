@@ -18,7 +18,7 @@ function Plants() {
         <h2 className="text-2xl md:text-3xl font-bold mt-16 mb-8">Explore Our Plant Collection</h2>
         <hr className='w-32 border border-[#0f9015] mx-auto' />
         
-        <h4 className="text-[#484847] text-sm md:text-base font-semibold mt-8 mx-16 text-center">Discover a range of plants perfect for any season and garden. From colorful flowers to hardy varieties, find the ideal plant to brighten your space.</h4>
+        <h4 className="text-[#484847] text-sm md:text-base font-semibold mt-8 mx-6 md:mx-16 text-center">Discover a range of plants perfect for any season and garden. From colorful flowers to hardy varieties, find the ideal plant to brighten your space.</h4>
 
           {/* Plant Cards */}
           <div className='flex flex-col md:flex-row md:items-start w-full md:mt-16 md:py-8'>

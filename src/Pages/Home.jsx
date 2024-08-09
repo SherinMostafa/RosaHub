@@ -76,7 +76,7 @@ const Home = () => {
         <h2 className="text-2xl md:text-3xl font-bold mt-16 mb-8">Explore Our Categories</h2>
         <hr className='w-32 border border-[#0f9015] mx-auto mb-8' />
 
-        <h4 className="text-[#484847] text-sm md:text-base font-semibold mb-8 mx-16 text-center">Explore our comprehensive range of plant care categories designed to help you with expert tips and guidance. Whether you're a beginner or an experienced gardener, find tailored advice and resources that suit your needs.</h4>
+        <h4 className="text-[#484847] text-sm md:text-base font-semibold mb-8 mx-6 md:mx-16 text-center">Explore our comprehensive range of plant care categories designed to help you with expert tips and guidance. Whether you're a beginner or an experienced gardener, find tailored advice and resources that suit your needs.</h4>
         <Categories displayStyle='card' />
       </section>
       
@@ -84,7 +84,7 @@ const Home = () => {
         <h2 className="text-2xl md:text-3xl font-bold mt-16 mb-8">Seasonal Plants</h2>
         <hr className='w-32 border border-[#0f9015] mx-auto mb-8' />
 
-        <h4 className="text-[#484847] text-sm md:text-base font-semibold mb-8 mx-16 text-center">Discover our handpicked selection of seasonal plants, perfect for enhancing your garden’s beauty and vibrancy throughout the year. Each plant is chosen for its ability to thrive in the current season, offering you a touch of nature’s best during each time of year.</h4>
+        <h4 className="text-[#484847] text-sm md:text-base font-semibold mb-8 mx-6 md:mx-16 text-center">Discover our handpicked selection of seasonal plants, perfect for enhancing your garden’s beauty and vibrancy throughout the year. Each plant is chosen for its ability to thrive in the current season, offering you a touch of nature’s best during each time of year.</h4>
         <div className='flex flex-wrap justify-center pb-8 container'>
           {Plant.map((plant) => (
             <PlantCard plant={plant} />
