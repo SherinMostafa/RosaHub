@@ -27,7 +27,7 @@ function Plants() {
               <Categories onFilterChange={setFilteredPlants} />
             </div>
 
-            <div className=' relative w-full flex flex-wrap py-14 pl-4 justify-center md:justify-normal border-l-2 min-h-screen border-[#0f9015]'>
+            <div className=' relative w-full flex flex-wrap py-14 pl-4 md:justify-normal border-l-2 border-[#0f9015]'>
               {/* Toggle Button */}
               <div 
                 onClick={toggleDisplayStyle} 
