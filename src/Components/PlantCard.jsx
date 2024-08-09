@@ -9,7 +9,7 @@ const PlantCard = ({ plant, styleType = 'default' }) => {
     <div
       className={`relative ${
         isHorizontal
-          ? 'flex max-w-5xl max-h-[264px] h-fit'
+          ? 'flex max-w-5xl max-h-[180px] h-fit'
           : isVertical
           ? 'flex flex-col max-w-xs'
           : 'max-w-sm'
@@ -19,7 +19,7 @@ const PlantCard = ({ plant, styleType = 'default' }) => {
       <img
         className={`${
           isHorizontal
-            ? 'w-1/3 h-auto min-w-[250px]'
+            ? 'w-1/3 h-auto min-w-[200px]'
             : isVertical
             ? 'w-full h-60'
             : 'w-full h-72'
