@@ -1,5 +1,4 @@
-// Home.js
-import React, { useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -10,12 +9,10 @@ import 'swiper/css/effect-fade';
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import Button from '../Components/Button';
 import PlantCard from '../Components/PlantCard';
-import Categories from '../Components/Categories';
 import { Plant } from '../Constants/index';
+import Categories from '../Components/Categories';
 
 const Home = () => {
-  const [filteredPlants, setFilteredPlants] = useState(Plant); // Initialize with all plants
-
   return (
     <>
       <section id='landing-section' className="">
@@ -74,18 +71,24 @@ const Home = () => {
           </Swiper>
         </div>
       </section>
+      
+      <section className='flex flex-col items-center'>
+        <h2 className="text-2xl md:text-3xl font-bold mt-16 mb-8">Explore Our Categories</h2>
+        <hr className='w-32 border border-[#0f9015] mx-auto mb-8' />
 
+        <h4 className="text-[#484847] text-sm md:text-base font-semibold mb-8 mx-16 text-center">Explore our comprehensive range of plant care categories designed to help you with expert tips and guidance. Whether you're a beginner or an experienced gardener, find tailored advice and resources that suit your needs.</h4>
+        <Categories displayStyle='card' />
+      </section>
+      
       <section id='plant-section' className='flex flex-col items-center'>
-        <Categories onFilterChange={setFilteredPlants} />
+        <h2 className="text-2xl md:text-3xl font-bold mt-16 mb-8">Seasonal Plants</h2>
+        <hr className='w-32 border border-[#0f9015] mx-auto mb-8' />
 
-        <div className='flex flex-wrap justify-center lg:justify-normal border-[#0f9015] border-t-[2px] py-8 container'>
-          {filteredPlants.length === 0 ? (
-              <p className="font-semibold text-base text-[#e53529]">No plants available for this category.</p>
-            ) : (
-              filteredPlants.map((plant, index) => (
-                <PlantCard key={index} plant={plant} />
-              ))
-            )}
+        <h4 className="text-[#484847] text-sm md:text-base font-semibold mb-8 mx-16 text-center">Discover our handpicked selection of seasonal plants, perfect for enhancing your garden’s beauty and vibrancy throughout the year. Each plant is chosen for its ability to thrive in the current season, offering you a touch of nature’s best during each time of year.</h4>
+        <div className='flex flex-wrap justify-center pb-8 container'>
+          {Plant.map((plant) => (
+            <PlantCard plant={plant} />
+          ))}
         </div>
       </section>
     </>
