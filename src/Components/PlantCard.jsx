@@ -9,7 +9,7 @@ const PlantCard = ({ plant, styleType = 'default' }) => {
     <div
       className={`relative ${
         isHorizontal
-          ? 'flex max-w-5xl max-h-[180px] h-fit'
+          ? 'flex max-w-5xl max-h-[240px] h-fit'
           : isVertical
           ? 'flex flex-col max-w-xs'
           : 'max-w-sm'
