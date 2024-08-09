@@ -19,7 +19,7 @@ const PlantCard = ({ plant, styleType = 'default' }) => {
       <img
         className={`${
           isHorizontal
-            ? 'w-1/3 h-auto min-w-[200px]'
+            ? 'w-1/3 h-auto min-w-[160px]'
             : isVertical
             ? 'w-full h-60'
             : 'w-full h-72'
