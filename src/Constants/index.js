@@ -3,6 +3,8 @@ import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import Plants from "../Pages/Plants";
+import Register from "../Pages/Register";
+import Login from "../Pages/Login";
 
 export const Pages = [
     {
@@ -24,6 +26,16 @@ export const Pages = [
         path: '/Contact',
         element: <Contact />,
         name: 'Contact Us'
+    },
+    {
+        path: '/Register',
+        element: <Register />,
+        name: 'Register'
+    },
+    {
+        path: '/Login',
+        element: <Login />,
+        name: 'Login'
     },
     {
         path: '*',

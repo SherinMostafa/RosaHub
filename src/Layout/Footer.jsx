@@ -16,7 +16,7 @@ const Footer = () => {
 
                     {/* Navigation Links */}
                     <div className="flex-1 mb-6 md:mb-0 lg:flex lg:items-center lg:justify-center">
-                        {Pages.filter(page => page.name !== 'NotFound').map(page => (
+                        {Pages.slice(0, 4).filter(page => page.name !== 'NotFound').map(page => (
                             <Link
                                 key={page.name}
                                 to={page.path}

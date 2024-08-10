@@ -11,16 +11,34 @@ const ScrollToTop = () => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  return null; // This component doesn't render anything
+  return null;
 };
 
 const AppRouter = () => {
   return (
     <Router>
       <ScrollToTop />
-      <div className='pb-16'>
-        <Navbar />
-      </div>
+      <Content />
+    </Router>
+  );
+};
+
+const Content = () => {
+  const location = useLocation();
+
+  const hideNavbarPaths = ['/Register', '/Login'];
+  const hideFooterPaths = ['/Register', '/Login'];
+
+  const shouldHideNavbar = hideNavbarPaths.includes(location.pathname);
+  const shouldHideFooter = hideFooterPaths.includes(location.pathname);
+
+  return (
+    <>
+      {!shouldHideNavbar && (
+        <div className='pb-16'>
+          <Navbar />
+        </div>
+      )}
       <Routes>
         {Pages.map((page) => (
           <Route
@@ -30,8 +48,8 @@ const AppRouter = () => {
           />
         ))}
       </Routes>
-      <Footer />
-    </Router>
+      {!shouldHideFooter && <Footer />}
+    </>
   );
 };
 

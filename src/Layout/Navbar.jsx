@@ -36,7 +36,7 @@ const Navbar = () => {
             <div className="hidden md:flex md:items-center md:justify-center flex-1">
               {/* Navigation Links */}
               <div className="flex space-x-4">
-                {Pages.filter(page => page.name !== 'NotFound').map(page => (
+                {Pages.slice(0, 4).filter(page => page.name !== 'NotFound').map(page => (
                   <Link
                     key={page.name}
                     to={page.path}
@@ -100,7 +100,7 @@ const Navbar = () => {
         id="mobile-menu"
       >
         <div className="px-2 pt-2 pb-3 space-y-1">
-          {Pages.filter(page => page.name !== 'NotFound').map(page => (
+          {Pages.slice(0, 4).filter(page => page.name !== 'NotFound').map(page => (
             <Link
               key={page.name}
               to={page.path}

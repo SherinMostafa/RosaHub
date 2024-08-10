@@ -27,7 +27,7 @@ function Plants() {
               <Categories onFilterChange={setFilteredPlants} />
             </div>
 
-            <div className=' relative w-full flex flex-wrap py-14 pl-4 md:justify-normal border-l-2 border-[#0f9015]'>
+            <div className=' relative w-full flex flex-wrap py-14 pl-4 justify-center md:justify-normal border-t-2 mt-8 md:border-l-2 md:border-t-0 md:mt-0 border-[#0f9015]'>
               {/* Toggle Button */}
               <div 
                 onClick={toggleDisplayStyle} 
@@ -38,7 +38,7 @@ function Plants() {
               </div>
 
               {filteredPlants.length === 0 ? (
-                <p className="font-semibold text-base text-[#e53529] mt-8 md:ml-10">No plants available for this category.</p>
+                <p className="font-semibold text-base text-[#e53529] mt-4 md:ml-10 md:h-screen">No plants available for this category.</p>
               ) : (
                 filteredPlants.map((filteredPlant, index) => (
                   <PlantCard key={index} plant={filteredPlant} styleType={displayStyle} />
