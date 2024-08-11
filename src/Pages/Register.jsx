@@ -14,7 +14,7 @@ const Register = () => {
       <div
         className={`${
           t.visible ? 'animate-enter' : 'animate-leave'
-        } max-w-xl w-full bg-white shadow-lg rounded-lg pointer-events-auto flex`}
+        } max-w-xl w-full bg-white shadow-lg rounded-lg pointer-events-auto flex mt-10`}
       >
         <div className="flex-1 w-0 p-4">
           <div className="flex items-start">
