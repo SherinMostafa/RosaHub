@@ -38,15 +38,10 @@ const Register = () => {
       navigate('/Login');
     }, 2000);
   };
-  
 
   return (
     <section>
       <div className="min-h-screen bg-white flex flex-col md:flex-row">
-        <Link to={'/'}>
-            <h2 className="text-xl my-[18px] px-2 sm:px-6 lg:px-8 font-bold text-[#02ec88]">RosaHub</h2>
-        </Link>
-
         <div className="w-full h-0 md:h-screen md:w-1/2">
           <img
             src="/Assets/Images/pexels-scottwebb-305821.jpg"
@@ -56,13 +51,15 @@ const Register = () => {
           />
         </div>
 
-        <div className="w-full md:w-1/2 pb-4 flex flex-col justify-center bg-white">
-          <Toaster
-            position="top-center"
-          />
+        <div className="relative w-full md:w-1/2 pb-4 flex flex-col justify-center bg-white">
+          <Toaster position="top-center" />
 
-          <h2 className="text-2xl text-[#010101] font-bold mx-auto mt-4 md:mt-0">Register</h2>
-          <h4 className="text-sm text-[#bebab3] font-semibold mx-auto mb-4 ">Create your new account</h4>
+          <Link to={'/'} className="absolute top-[18px] left-0 px-2 sm:px-6 lg:px-8">
+            <h2 className="text-xl font-bold text-[#02ec88]">RosaHub</h2>
+          </Link>
+
+          <h2 className="text-2xl text-[#010101] font-bold mx-auto mt-16 md:mt-0">Register</h2>
+          <h4 className="text-sm text-[#bebab3] font-semibold mx-auto mb-4">Create your new account</h4>
 
           <form className="p-6 px-10 space-4" onSubmit={handleSubmit(onSubmit)}>
             <div className="flex space-x-4">
