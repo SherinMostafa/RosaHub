@@ -69,7 +69,7 @@ const Input = forwardRef(({ label, type = 'text', className = '', float = true, 
         type={inputType}
         id={label}
         ref={ref}
-        className={`block w-full px-3 py-2 mt-2 mb-4 text-sm text-[#484847] font-semibold bg-white border ${error ? 'border-[#e53529]' : 'border-[#5cb25d]'} rounded-sm shadow-sm focus:outline-none focus:ring-0 ${error ? 'focus:border-[#e53529]' : 'focus:border-[#5cb25d]'}`}
+        className={`block w-full px-3 py-2 mt-2 mb-4 text-sm text-[#484847] font-semibold bg-white border ${error ? 'border-[#e53529]' : 'border-[#5cb25d]'} rounded-sm shadow-sm focus:outline-none focus:ring-0 ${error ? 'focus:border-[#e53529]' : 'focus:border-[#5cb25d]'} ${type === 'password' ? 'pr-10' : ''}`}
         {...props}
       />
       {type === 'password' && (
