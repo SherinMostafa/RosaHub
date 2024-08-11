@@ -172,7 +172,7 @@ const Register = () => {
 
             <Button
               label="Register"
-              className="w-full flex justify-center py-3 text-white bg-[#5cb25d] hover:bg-[#0f9015] mt-4 mb-6"
+              className="w-40 mx-auto flex justify-center py-2 text-white bg-[#5cb25d] hover:bg-[#0f9015] my-6"
               type="submit"
             />
 
