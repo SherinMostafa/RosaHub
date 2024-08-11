@@ -15,8 +15,12 @@ const Login = () => {
 
   return (
     <section>
-      <div className="max-h-screen bg-white flex flex-col-reverse md:flex-row-reverse">
-        <div className="w-full h-[0px] md:h-screen md:w-1/2">
+      <div className="min-h-screen bg-white flex flex-col md:flex-row-reverse">
+        <Link to={'/'}>
+            <h2 className="text-xl my-[18px] px-2 sm:px-6 lg:px-8 font-bold text-[#02ec88]">RosaHub</h2>
+        </Link>
+
+        <div className="w-full h-0 md:h-screen md:w-1/2">
           <img
             src="/Assets/Images/pexels-scottwebb-305821.jpg"
             alt="Register"
@@ -25,11 +29,7 @@ const Login = () => {
           />
         </div>
 
-        <div className="w-full md:w-1/2 py-4 flex flex-col justify-start bg-white">
-          <Link to={'/'}>
-            <h2 className="text-xl px-2 sm:px-6 lg:px-8 font-bold text-[#02ec88] mt-[2px]">RosaHub</h2>
-          </Link>
-
+        <div className="w-full md:w-1/2 py-4 flex flex-col justify-center bg-white">
           <h2 className="text-2xl text-[#010101] font-bold mx-auto mt-4 md:mt-0">Welcome</h2>
           <h4 className="text-sm text-[#bebab3] font-semibold mx-auto mb-4 ">Login into your account</h4>
 
