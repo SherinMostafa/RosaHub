@@ -78,7 +78,7 @@ const Login = () => {
 
             <Button
               label="Login"
-              className="w-40 mx-auto flex justify-center py-2 text-white bg-[#5cb25d] hover:bg-[#0f9015] mt-8 mb-6"
+              className="w-full flex justify-center py-3 text-white bg-[#5cb25d] hover:bg-[#0f9015] mt-8 mb-6"
               type="submit"
             />
 
