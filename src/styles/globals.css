@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: content-box;
+  @apply text-neutral-dark font-barlow;
+}
+
+.card {
+  @apply rounded bg-white shadow-sm m-4 p-6 space-y-8;
+}
+
+.title {
+  @apply text-2xl font-italiana font-bold tracking-wider;
+}

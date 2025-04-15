@@ -1,0 +1,12 @@
+.control {
+  &[data-inactive] {
+    opacity: 0;
+    cursor: default;
+  }
+}
+
+.indicator {
+  &[data-active] {
+    width: 2rem;
+  }
+}
